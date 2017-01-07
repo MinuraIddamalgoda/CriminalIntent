@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!-- Dear Lord in Heaven, please forgive me for the clusterfuck you witness below for it is 1:00am
+     and RelativeLayout remains the only solution I have found that works. Perhaps one day in the
+     nurturing bussom of the open source community, a brave soul will arise that shall slay this
+     beast of XML code. But until that one day, fuck this shit
+
+     Amen -->
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+    <!-- The top one (title) -->
+    <TextView
+        android:textStyle="bold"
+        android:text="TextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginLeft="16dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="18dp"
+        android:id="@+id/list_item_crime_text_view"/>
+
+    <!-- The bottom one (date) -->
+    <TextView
+        android:text="TextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/textView"
+        android:layout_below="@id/list_item_crime_text_view"
+        android:layout_alignLeft="@id/list_item_crime_text_view"
+        android:layout_alignStart="@id/list_item_crime_text_view"
+        android:layout_marginTop="15dp"/>
+
+    <CheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="16dp"
+        android:layout_marginEnd="16dp"
+        android:id="@+id/checkBox"
+        android:layout_alignTop="@+id/list_item_crime_text_view"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignBottom="@+id/textView"/>
+</RelativeLayout>
